@@ -3,9 +3,33 @@ extends ../base
 block title
     index page
 block main
+
     .main
         .mini
-        .maxi
-        
+            img.borehole(src=require('./img/skv.png') width='200px')
+            .mini__tube
+                .mini__tube_tube
+                .mini__tube_packer
+                img.packer(src=require('./img/hopper.png') )
+                //img.packer(src=require('./img/packer.jpg') width='200px')
+            .mini__coilTubing
+                .mini__coilTubing_tube
+                .mini__coilTubing_nozzle
+                    img.potok(src=require('./img/potok.gif'))
+                //img.borehole(src=require('./img/main.jpg') width='200px')
+                //img.borehole(src=require('./img/main.jpg') width='200px')
+                //img.borehole(src=require('./img/main.jpg') width='200px')
+            .mini__corks
+                - for (var x = 1; x < 5; x++) {
+                div(class="mini__cork " + x )
+                    .cork
+                    .propant
+                -}
 
-        лупа
+        .magnifier
+            h1 dddxdfasfsf
+        .buttons
+            button#potok поток
+    .range
+        input#tubeRange(type="range" min="0" max="700" step="1" value="0")
+        input#coilTubingRange(type="range" min="0" max="900" step="1" value="0")

@@ -16,7 +16,7 @@ const uglifyJS = require('./webpack/js.uglify');
 
 const images = require('./webpack/images');
 
-const babel = require('./webpack/babel')
+const babel = require('./webpack/babel');
 
 const PATHS = {
     source: path.join(__dirname, 'source'),
