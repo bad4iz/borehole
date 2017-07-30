@@ -17,7 +17,7 @@ function read(evtType) {
     tubeRange.addEventListener(evtType, function () {
         window.requestAnimationFrame(function () {
             console.log(tubeRange.value);
-            mini__tube_tubes.forEach(item =>{
+            mini__tube_tubes.forEach(item => {
                 item.style.height = tubeRange.value + 'px';
             });
         });
@@ -26,7 +26,7 @@ function read(evtType) {
     coilTubing.addEventListener(evtType, function () {
         window.requestAnimationFrame(function () {
             console.log(coilTubing.value);
-            mini__coilTubing_tubes.forEach(item =>{
+            mini__coilTubing_tubes.forEach(item => {
                 item.style.height = coilTubing.value + 'px';
             });
         });
@@ -43,7 +43,7 @@ var buttonPotok = document.querySelector('button#potok');
 
 function sw() {
     var swit = false;
-    return ()=>{
+    return () => {
         swit = !swit;
         return swit;
     }
@@ -53,7 +53,7 @@ var potokVisible = sw();
 
 buttonPotok.onclick = () => {
     imgPotoks.forEach(imgPotok => {
-        imgPotok.style.opacity = potokVisible() ? 1: 0 ;
+        imgPotok.style.opacity = potokVisible() ? 1 : 0;
 
     })
 };
@@ -61,20 +61,20 @@ buttonPotok.onclick = () => {
 
 // пробки
 class Cork {
-    constructor(height){
+    constructor(height) {
         this.parent = document.querySelector('.mini__corks');
-        this.height=height;
+        this.height = height;
         this.cork = this.add();
     }
-    add(){
-        
-        var mini__cork = document.createElement('div'); 
+    add() {
+
+        var mini__cork = document.createElement('div');
         mini__cork.className = 'mini__cork';
         mini__cork.style.height = this.height + 'px';
 
-        var cork = document.createElement('div'); 
+        var cork = document.createElement('div');
         cork.className = 'cork';
-        var propant = document.createElement('div'); 
+        var propant = document.createElement('div');
         propant.className = 'propant';
 
         mini__cork.appendChild(cork);
@@ -86,14 +86,22 @@ class Cork {
 
     }
 
-    washed(){
-        setTimeout( () => {
-            this.cork.style.height = '900px';
-        }, 3000);
+    washed(time = 3000) {
+        setTimeout(() => {
+            this.growing(500);
+            this.opacity(9000);
+
+        }, time);
     }
 
-    growing(height){
-        this.cork.style.height = height + 'px'
+    growing(height) {
+        this.cork.style.height = height + 'px';
+    }
+
+    opacity(time) {
+        setTimeout(() => {
+           this.cork.style.opacity = 0;
+        }, time);
     }
 
 }
@@ -102,5 +110,5 @@ class Cork {
 var cork = new Cork(10);
 var cork2 = new Cork(120);
 
-// cork2.washed();
+cork2.washed();
 // cork2.growing(22);

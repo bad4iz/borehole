@@ -95,10 +95,14 @@
         // height: 200px;
         display: flex;
         flex-flow:column nowrap;
+
+        
+        transition: height 2s ease-in, opacity 2.1s ease-in  ;
         .cork{
           height: 20px;
           background: url(img/cork.gif);
           background-size: cover;
+          transition: opacity 0.5s cubic-bezier(0, 0, 1, 1);
         }
         .propant{
           flex: 9 1 35px;
