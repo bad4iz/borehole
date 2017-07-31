@@ -36,6 +36,7 @@ function read(evtType) {
 
 var buttonPotok = document.querySelector('button#potok');
 
+
 buttonPotok.onclick = () => {
     // промывка включить выключить
     tubes.waterFlow();
@@ -54,20 +55,20 @@ buttonWashed.onclick = () => {
 var aspoInput = document.querySelector('input#aspoInput');
 aspoInput.onchange = () => {
     // position aspo
-    coilTubings.aspoPosition(300);
-    coilTubings.aspoShow();
+    tubes.aspoPosition(300);
+    tubes.aspoShow();
 };
 
 var aspoHideButton = document.querySelector('button#aspoHide');
 aspoHideButton.onclick = () => {
     // 
-    coilTubings.aspoHide();
+    tubes.aspoHide();
 };
 
 var aspoShowButton = document.querySelector('button#aspoShow');
 aspoShowButton.onclick = () => {
     // 
-    coilTubings.aspoShow();
+    tubes.aspoShow();
 };
 
 

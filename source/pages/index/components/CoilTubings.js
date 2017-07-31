@@ -2,7 +2,10 @@ export default class CoilTubings {
     constructor() {
         this.coilTubing = document.querySelectorAll('.mini__coilTubing_tube');
         this.height;
-        this.aspos = document.querySelectorAll('.mini__aspo');
+
+        this.magnifier = document.querySelector('.magnifier');
+        this.top = 1500;
+        this.magnifier.style.top = this.top + 'px';
     }
 
     position(pixels) {
@@ -10,23 +13,7 @@ export default class CoilTubings {
         this.coilTubing.forEach(item => {
             item.style.height = pixels + 'px';
         });
+        this.magnifier.style.top = this.top - 4 * pixels + 'px';
     }
-    aspoPosition(pixels) {
-        this.aspos.forEach(item => {
-            item.style.top = pixels + 'px';
-        });
-    }
-
-    aspoShow() {
-        this.aspos.forEach(item => {
-            item.style.opacity = 1;
-        });
-    }
-
-    
-    aspoHide() {
-        this.aspos.forEach(item => {
-            item.style.opacity = 0;
-        });
-    }
+   
 }
