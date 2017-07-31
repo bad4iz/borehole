@@ -1,14 +1,18 @@
 import './index.scss';
 import 'normalize.css';
 
-// труба
-var mini__tube_tubes = document.querySelectorAll('.mini__tube_tube');
+import Cork from './components/Cork';
+import CoilTubings from './components/CoilTubings';
+import Tubes from './components/Tubes';
+
+var coilTubings = new CoilTubings();
+var tubes = new Tubes();
+
+
+
+// ползунки
 var tubeRange = document.querySelector('#tubeRange');
-
-
-
-var mini__coilTubing_tubes = document.querySelectorAll('.mini__coilTubing_tube');
-var coilTubing = document.querySelector('#coilTubingRange');
+var coilTubingRange = document.querySelector('#coilTubingRange');
 
 read("mousedown");
 read("mousemove");
@@ -16,99 +20,57 @@ read("mousemove");
 function read(evtType) {
     tubeRange.addEventListener(evtType, function () {
         window.requestAnimationFrame(function () {
-            console.log(tubeRange.value);
-            mini__tube_tubes.forEach(item => {
-                item.style.height = tubeRange.value + 'px';
-            });
+            // само движение
+            tubes.position(tubeRange.value);
         });
     });
 
-    coilTubing.addEventListener(evtType, function () {
+    coilTubingRange.addEventListener(evtType, function () {
         window.requestAnimationFrame(function () {
-            console.log(coilTubing.value);
-            mini__coilTubing_tubes.forEach(item => {
-                item.style.height = coilTubing.value + 'px';
-            });
+            // само движение
+            coilTubings.position(coilTubingRange.value);
         });
     });
 }
 
-
-// поток
-
-var imgPotoks = document.querySelectorAll('img.potok');
 
 var buttonPotok = document.querySelector('button#potok');
 
-
-function sw() {
-    var swit = false;
-    return () => {
-        swit = !swit;
-        return swit;
-    }
-}
-
-var potokVisible = sw();
-
 buttonPotok.onclick = () => {
-    imgPotoks.forEach(imgPotok => {
-        imgPotok.style.opacity = potokVisible() ? 1 : 0;
+    // промывка включить выключить
+    tubes.waterFlow();
+};
 
-    })
+var cork = new Cork(100);
+
+var buttonWashed = document.querySelector('button#washed');
+buttonWashed.onclick = () => {
+    // промывка включить выключить
+    cork.washed();
 };
 
 
-// пробки
-class Cork {
-    constructor(height) {
-        this.parent = document.querySelector('.mini__corks');
-        this.height = height;
-        this.cork = this.add();
-    }
-    add() {
+// aspo
+var aspoInput = document.querySelector('input#aspoInput');
+aspoInput.onchange = () => {
+    // position aspo
+    coilTubings.aspoPosition(300);
+    coilTubings.aspoShow();
+};
 
-        var mini__cork = document.createElement('div');
-        mini__cork.className = 'mini__cork';
-        mini__cork.style.height = this.height + 'px';
+var aspoHideButton = document.querySelector('button#aspoHide');
+aspoHideButton.onclick = () => {
+    // 
+    coilTubings.aspoHide();
+};
 
-        var cork = document.createElement('div');
-        cork.className = 'cork';
-        var propant = document.createElement('div');
-        propant.className = 'propant';
-
-        mini__cork.appendChild(cork);
-        mini__cork.appendChild(propant);
-
-        this.parent.appendChild(mini__cork);
-
-        return mini__cork;
-
-    }
-
-    washed(time = 3000) {
-        setTimeout(() => {
-            this.growing(500);
-            this.opacity(9000);
-
-        }, time);
-    }
-
-    growing(height) {
-        this.cork.style.height = height + 'px';
-    }
-
-    opacity(time) {
-        setTimeout(() => {
-           this.cork.style.opacity = 0;
-        }, time);
-    }
-
-}
+var aspoShowButton = document.querySelector('button#aspoShow');
+aspoShowButton.onclick = () => {
+    // 
+    coilTubings.aspoShow();
+};
 
 
-var cork = new Cork(10);
-var cork2 = new Cork(120);
-
-cork2.washed();
-// cork2.growing(22);
+ 
+            // button#aspoShow показать
+            // button#aspoHide скрыть
