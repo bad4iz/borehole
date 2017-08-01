@@ -5,8 +5,11 @@ module.exports = () => {
     return {
         plugins: [
             new Uglify({
-                compress: {
-                    warnings: false,
+                uglifyOptions: {
+                    ie8: false,
+                    ecma: 6,
+                    // compress: { ...options },
+                    warnings: false
             
                 }
             })
