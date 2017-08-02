@@ -1,7 +1,7 @@
 import './index.scss';
 import 'normalize.css';
 
-// import '../../components/shemeStrapping/schemeStrapping';
+import '../../components/shemeStrapping/schemeStrapping';
 
 import Cork from './components/Cork';
 import CoilTubings from './components/CoilTubings';

@@ -1,6 +1,6 @@
 .main {
   display: flex;
-
+  justify-content: space-between;
   .mini {
     padding-top: 20px;
     min-width: 200px;
@@ -135,14 +135,14 @@
     transform: scale(4);
     position: absolute;
     top: 1000px;
-    left: 300px;
+    left: 250px;
   }
     .circle{
       position: absolute;
-      width: 700px;
-      height: 700px;
-      left: 550px;
-      
+      width: 600px;
+      height: 600px;
+      left: 220px;
+        
       border: 1px solid red;
       border-radius: 50%;
       overflow: hidden;
@@ -158,4 +158,172 @@
     width: 50%
   }
 
+}
+
+
+.schemeStrapping{
+  background: url(./img/schemeStrapping/schemeStrapping.png);
+  width: 900px;
+  height: 900px;
+  background-size: contain;
+  position: relative;
+  left: 500px;
+  background-repeat: no-repeat;
+      background-color: gray;
+}
+
+.kvd{
+  position: absolute;  
+  background: url(./img/schemeStrapping/kvd3.png);
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+   transition: all 1s ease-in-out;
+    border-radius: 50%;
+   box-shadow: 0 0 15px #3a3a3a, 0px 0px 3px rgba(241, 9, 9, 0.65);
+}
+
+.valve{
+  position: absolute;  
+  background: url(./img/schemeStrapping/valve.png);
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+   transition: all 3s ease-in-out;
+   border-radius: 50%;
+   box-shadow: 0 0 15px #3a3a3a, 0px 0px 3px rgba(241, 9, 9, 0.65);
+}
+
+.r1{
+  top: 424px;
+  left: 147px;
+}
+
+.r2{
+  top: 541px;;
+  left: 147px;
+}
+
+.r3{
+  top: 598px;
+  left: 147px;
+}
+.d1{
+  top: 436px;
+  left: 457px;
+}
+.d2{
+  top: 436px;
+  left:659px;;
+}
+.d3{
+  top: 368px;
+  left: 457px;
+}
+.d4{
+  top: 369px;
+  left: 659px;
+}
+.d5{
+  top: 163px;
+  left: 431px;
+}
+.d6{
+    top: 197px;
+    left: 464px;
+}
+.d7{
+     top: 350px;
+    left: 600px;
+}
+.d8{
+    top: 230px;
+    left: 430px;
+}
+.d9{
+  top: 230px;
+  left: 498px;
+}
+
+.d10{
+    top: 261px;
+    left: 691px;
+}
+.d11{
+     top: 300px;
+    left: 525px;
+}
+.d12{
+     top: 300px;
+    left: 591px;
+}
+// 
+.d13{
+     top: 575px;
+    left: 376px;
+}
+.d14{
+     top: 575px;
+    left: 470px;
+}
+.d15{
+     top: 575px;
+    left: 543px;
+}
+
+// 
+.d16{
+     top: 625px;
+    left: 419px;
+}
+.d17{
+     top: 625px;
+    left: 587px;
+}
+
+// 
+.d18{
+     top: 675px;
+    left: 376px;
+}
+.d19{
+     top: 675px;
+    left: 470px;
+}
+.d20{
+     top: 675px;
+    left: 543px;
+}
+
+
+.kvdOf{
+  transform: rotate(90deg)  scale(1.1);
+}
+
+.valveOf{
+  transform: rotate(1890deg) scale(1.1);
+  
+}
+
+.waterlevel{
+  position: relative;
+  width: 5px;
+  height: 50px;
+  top: 406px;
+  left: 349px;
+  border: 1px solid #3a3a3a;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+
+}
+.level{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background-color: rgba(0, 20, 255, 0.6);
+}
+.procBlock{
+  border-bottom: 1px solid #3a3a3a;
 }
