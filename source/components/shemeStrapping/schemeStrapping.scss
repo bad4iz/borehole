@@ -1,0 +1,49 @@
+.schemeStrapping{
+  background: url(./img/schemeStrapping/schemeStrapping.png);
+  width: 900px;
+  height: 900px;
+  background-size: contain;
+}
+
+.kvd{
+  position: absolute;  
+  background: url(./img/valveHalfCurledKvd.png);
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+   transition: all 3s ease-in-out;
+}
+
+.valve{
+  position: absolute;  
+  background: url(./img/valve.png);
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+   transition: all 3s ease-in-out;
+}
+
+.pos1{
+  top: 424px;
+  left: 147px;
+}
+
+.pos2{
+  top: 541px;;
+  left: 147px;
+}
+
+.pos3{
+  position: absolute;
+  top: 598px;
+  left: 147px;
+}
+
+.kvdOf{
+  transform: rotate(90deg)  scale(1.1);
+}
+
+.valveOf{
+  transform: rotate(1890deg) scale(1.1);
+  
+}
