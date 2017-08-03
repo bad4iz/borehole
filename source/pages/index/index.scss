@@ -140,11 +140,10 @@
     .circle{
       position: absolute;
       width: 600px;
-      height: 600px;
+      height: 800px;
       left: 220px;
-        
-      border: 1px solid red;
-      border-radius: 50%;
+      top: 50px;
+      border: 1px solid grey;
       overflow: hidden;
     }
 
