@@ -1,49 +1,228 @@
-.schemeStrapping{
-  background: url(./img/schemeStrapping/schemeStrapping.png);
+
+.schemeStrappings{
+  background: url(./img/schemeStrapping2.png);
   width: 900px;
   height: 900px;
   background-size: contain;
+  position: relative;
+      left: 450px;
+  background-repeat: no-repeat;
+      // background-color: gray;
 }
 
 .kvd{
-  position: absolute;  
-  background: url(./img/valveHalfCurledKvd.png);
+  position: absolute;
+  background: url(./img/kvd3.png);
   width: 25px;
   height: 25px;
   background-size: contain;
-   transition: all 3s ease-in-out;
+  background-repeat: no-repeat;
+   transition: all 1s ease-in-out;
+    border-radius: 50%;
+   box-shadow: 0 0 6px #3a3a3a;;
 }
 
 .valve{
-  position: absolute;  
+  position: absolute;
   background: url(./img/valve.png);
   width: 40px;
   height: 40px;
   background-size: contain;
-   transition: all 3s ease-in-out;
+   transition: all 5s ease-in-out;
+   border-radius: 50%;
+   box-shadow: 0 0 7px #3a3a3a, 0px 0px 3px rgba(241, 9, 9, 0.65);
 }
 
-.pos1{
-  top: 424px;
-  left: 147px;
+
+//////////////////////  фонтаная арматура   /////////////////////////////////////
+
+// малый затрубок
+#smallBranch_1{
+  top: 374px;
+  left: 224px
+}
+#smallBranch_2{
+  top: 374px;
+  left: 260px;
 }
 
-.pos2{
-  top: 541px;;
-  left: 147px;
+// меж колонка
+ #betweenColumn_1{
+    top: 804px;
+    left: 94px;
+ }
+ #betweenColumn_2{
+    top: 756px;
+    left: 99px;
+ }
+
+
+
+#christmasTree_1{
+    top: 599px;
+    left: 156px;
 }
 
-.pos3{
-  position: absolute;
-  top: 598px;
-  left: 147px;
+#christmasTree_2{
+    top: 541px;
+    left: 156px;
 }
+
+#christmasTree_3{
+    top: 425px;
+    left: 156px;
+}
+
+// затрубная задвижка
+#branchValue_1{
+    top: 695px;
+    left: 24px;
+}
+#branchValue_2{
+    top: 695px;
+    left: 104px;
+}
+
+// струна
+#string_1{
+  top: 482px;
+  left: 19px;
+}
+#string_2{
+  top: 482px;
+  left: 99px;
+}
+
+#highPressureLine_1{
+      top: 261px;
+    left: 700px;
+}
+#highPressureLine_2{
+      top: 197px;
+    left: 474px;
+}
+#highPressureLine_3{
+    top: 163px;
+  left: 440px;
+}
+// линия высокого давления азотная установка
+#highPressureLineNitrogen{
+ top: 230px;
+    left: 440px;
+
+}
+// линия высокого давления насосная установка
+#highPressureLinePomp{
+    top: 230px;
+    left: 507px;
+}
+
+// линия низкого давления  кислотная установка` - 
+#lineLowPressureAcid{
+      top: 300px;
+    left: 534px;
+}
+// линия низкого давления  кислотная установка_1` 
+#lineLowPressureAcid_1{
+    top: 436px;
+    left: 467px;
+}
+// линия низкого давления  кислотная установка_2` 
+#lineLowPressureAcid_2{
+    top: 368px;
+    left: 466px;
+}
+
+// линия низкого давления  резервуар` - 
+#lineLowPressureReservoir{
+  top: 300px;
+  left: 600px;
+}
+// линия низкого давления  резервуар_1` 
+#lineLowPressureReservoir_1{
+  top: 436px;
+  left: 669px;
+}
+// линия низкого давления  резервуар_2` 
+#lineLowPressureReservoir_2{
+  top: 369px;
+  left: 669px;
+}
+// линия низкого давления  циркуляционная емкость` 
+#lineLowPressureCirculation{
+  top: 335px;
+  left: 568px;
+}
+
+
+
+// низ
+#throttle_1{
+    top: 671px;
+    left: 385px;
+}
+#throttle_2{
+     top: 675px;
+    left: 479px;
+}
+#throttle_3{
+     top: 675px;
+    left: 552px;
+}
+
+// сердцевина
+#throttle_4{
+      top: 625px;
+    left: 429px;
+}
+#throttle_5{
+  top: 625px;
+  left: 595px;
+}
+// верх
+#throttle_6{
+    top: 575px;
+    left: 385px;
+}
+#throttle_7{
+     top: 575px;
+    left: 479px;
+}
+#throttle_8{
+     top: 575px;
+    left: 553px;
+}
+
+
 
 .kvdOf{
   transform: rotate(90deg)  scale(1.1);
 }
 
 .valveOf{
-  transform: rotate(1890deg) scale(1.1);
-  
+  transform: rotate(-3330deg) scale(1.1);
+
+}
+
+.waterlevel{
+  position: relative;
+  width: 5px;
+  height: 50px;
+  top: 406px;
+  left: 349px;
+  border: 1px solid #3a3a3a;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+
+}
+.level{
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+  background-color: rgba(0, 20, 255, 0.6);
+}
+.procBlock{
+  border-bottom: 1px solid #3a3a3a;
 }

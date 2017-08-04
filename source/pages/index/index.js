@@ -1,7 +1,12 @@
+
+
 import './index.scss';
+// import 'bootstrap/dist/css/bootstrap.css';
 import 'normalize.css';
 
 import '../../components/shemeStrapping/schemeStrapping';
+
+
 
 import Cork from './components/Cork';
 import CoilTubings from './components/CoilTubings';
@@ -46,12 +51,12 @@ buttonPotok.onclick = () => {
 
 var cork = new Cork(100);
 
+var i = 0;
 var buttonWashed = document.querySelector('button#washed');
 buttonWashed.onclick = () => {
     // промывка включить выключить
     cork.washed();
 };
-
 
 // aspo
 var aspoInput = document.querySelector('input#aspoInput');
@@ -73,7 +78,8 @@ aspoShowButton.onclick = () => {
     tubes.aspoShow();
 };
 
-
- 
-            // button#aspoShow показать
-            // button#aspoHide скрыть
+// .schemeStrapping
+var schemeStrappings = document.querySelectorAll('.schemeStrapping');
+schemeStrappings.forEach(schemeStrapping => {
+    schemeStrapping.addEventListener('click', (val) => console.log(val.target.id), false );
+})

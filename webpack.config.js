@@ -47,7 +47,7 @@ const common = merge([
             new HtmlWebpackPlugin({
                 filename: 'blog.html',
                 chunks: ['blog', 'common'],
-                template: PATHS.source + '/pages/blog/blog.pug'
+                template: PATHS.source  + '/pages/blog/blog.pug'
             }),
             new webpack.optimize.CommonsChunkPlugin({
                 name: 'common'
@@ -66,6 +66,7 @@ module.exports = (env) => {
         return merge([
             common,
             extractCSS(),
+
             // uglifyJS(),
         ]);
     }
@@ -75,6 +76,7 @@ module.exports = (env) => {
             {
                 devtool: 'source-map'
             },
+
             devserver(),
             sass(),
             css()

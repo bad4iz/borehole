@@ -1,4 +1,4 @@
-import './schemeStrapping';
+import './schemeStrapping.scss';
 
 var kvds = document.querySelectorAll('.kvd');
 
