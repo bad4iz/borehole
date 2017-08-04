@@ -33,30 +33,43 @@
    box-shadow: 0 0 7px #3a3a3a, 0px 0px 3px rgba(241, 9, 9, 0.65);
 }
 
+.kvdOf{
+  transform: rotate(90deg)  scale(1.1);
+}
+
+
+.valveOf{
+  transform: rotate(-3330deg) scale(1.1);
+   box-shadow: 0 0 7px #3a3a3a, 0px 0px 2px 2px rgba(9, 241, 32, 0.65);
+}
+
+
 
 //////////////////////  фонтаная арматура   /////////////////////////////////////
+
+
 
 // малый затрубок
 #smallBranch_1{
   top: 374px;
   left: 224px
 }
+
 #smallBranch_2{
   top: 374px;
   left: 260px;
 }
 
 // меж колонка
- #betweenColumn_1{
+#betweenColumn_1{
     top: 804px;
     left: 94px;
  }
- #betweenColumn_2{
+
+#betweenColumn_2{
     top: 756px;
     left: 99px;
  }
-
-
 
 #christmasTree_1{
     top: 599px;
@@ -195,14 +208,6 @@
 
 
 
-.kvdOf{
-  transform: rotate(90deg)  scale(1.1);
-}
-
-.valveOf{
-  transform: rotate(-3330deg) scale(1.1);
-
-}
 
 .waterlevel{
   position: relative;
