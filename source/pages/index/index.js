@@ -1,7 +1,6 @@
 
 
 import './index.scss';
-// import 'bootstrap/dist/css/bootstrap.css';
 import 'normalize.css';
 
 import '../../components/shemeStrapping/schemeStrapping';
@@ -42,7 +41,6 @@ function read(evtType) {
 
 
 var buttonPotok = document.querySelector('button#potok');
-
 
 buttonPotok.onclick = () => {
     // промывка включить выключить
