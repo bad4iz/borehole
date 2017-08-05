@@ -35,6 +35,18 @@ const common = merge([
             path: PATHS.build,
             filename: 'js/[name].js'
         },
+        module: {
+            loaders: [
+                {
+                    test: /\.js$/,
+                    exclude: /(node_modules|bower_components)/,
+                    loader: 'babel-loader',
+                    query: {
+                        presets: ['es2015']
+                    },
+                }
+            ]
+        },
         plugins: [
 
 
@@ -57,7 +69,6 @@ const common = merge([
     },
     pug(),
     images(),
-    babel(),
 ]);
 
 
