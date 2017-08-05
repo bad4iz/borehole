@@ -35,25 +35,10 @@ const common = merge([
             path: PATHS.build,
             filename: 'js/[name].js'
         },
-        module: {
-            loaders: [
-                {
-                    test: /\.js$/,
-                    exclude: /(node_modules|bower_components)/,
-                    loader: 'babel-loader',
-                    query: {
-                        presets: ['es2015']
-                    },
-                }
-            ]
-        },
         plugins: [
-
-
-
             new HtmlWebpackPlugin({
                 filename: 'index.html',
-                chunks: ['index', 'common'],
+                chunks: ['index.js', 'common.js'],
                 template: PATHS.source + '/pages/index/index.pug'
             }),
             new HtmlWebpackPlugin({
@@ -76,6 +61,7 @@ module.exports = (env) => {
     if (env === 'production') {
         return merge([
             common,
+            babel(),
             extractCSS(),
 
             // uglifyJS(),
