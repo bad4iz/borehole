@@ -240,3 +240,23 @@
 .procBlock{
   border-bottom: 1px solid #3a3a3a;
 }
+
+
+.gaugePressurePipe{
+    border: 1px solid #3a3a3a;
+    width: 76px;
+    height: 30px;
+    position: relative;
+    top: 201px;
+    left: 651px;
+    background: cyan;
+    // border-radius: 20px;
+    padding-left: 11px;
+    font-family: monospace;
+    padding: 5px 13px;
+}
+  // #gaugePressurePipe
+  // span bar
+span#gaugePressurePipe {
+    margin-right: 6px;
+}

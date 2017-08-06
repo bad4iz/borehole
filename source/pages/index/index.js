@@ -5,8 +5,6 @@ import 'normalize.css';
 
 import '../../components/shemeStrapping/schemeStrapping';
 
-
-
 import Cork from './components/Cork';
 import CoilTubings from './components/CoilTubings';
 import Tubes from './components/Tubes';
