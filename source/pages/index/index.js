@@ -75,7 +75,7 @@ aspoShowButton.onclick = () => {
 };
 
 // .schemeStrapping
-var schemeStrappings = document.querySelectorAll('.schemeStrapping');
+var schemeStrappings =  [].slice.call(document.querySelectorAll('.schemeStrapping'));
 schemeStrappings.forEach(schemeStrapping => {
     schemeStrapping.addEventListener('click', (val) => console.log(val.target.id), false );
 })

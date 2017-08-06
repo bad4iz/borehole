@@ -1,6 +1,9 @@
 export default class CoilTubings {
     constructor() {
-        this.coilTubing = document.querySelectorAll('.mini__coilTubing_tube');
+        this.coilTubing = [].slice.call(document.querySelectorAll('.mini__coilTubing_tube'));
+
+
+
         this.height;
 
         this.magnifier = document.querySelector('.magnifier');

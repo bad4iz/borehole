@@ -2,13 +2,13 @@ export default class Tubes {
 
     constructor() {
         // труба
-        this.mini__tube_tubes = document.querySelectorAll('.mini__tube_tube');
+        this.mini__tube_tubes = [].slice.call(document.querySelectorAll('.mini__tube_tube'));
 
         this.flag = false;
         
-        this.imgPotoks = document.querySelectorAll('img.potok');
+        this.imgPotoks =  [].slice.call(document.querySelectorAll('img.potok'));
 
-        this.aspos = document.querySelectorAll('.mini__aspo');
+        this.aspos =  [].slice.call(document.querySelectorAll('.mini__aspo'));
     }
 
     position(pixels) {

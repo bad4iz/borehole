@@ -1,6 +1,6 @@
 import './schemeStrapping.scss';
 
-var kvds = document.querySelectorAll('.kvd');
+var kvds =  [].slice.call(document.querySelectorAll('.kvd'));
 
 kvds.forEach(kvd =>{
     kvd.addEventListener('click',()=>{
@@ -8,7 +8,7 @@ kvds.forEach(kvd =>{
     },false);
 });
 
-var valves = document.querySelectorAll('.valve');
+var valves = [].slice.call(document.querySelectorAll('.valve'));
 
 valves.forEach(valve =>{
     valve.addEventListener('click',()=>{
