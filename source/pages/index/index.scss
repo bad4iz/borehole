@@ -1,0 +1,164 @@
+@import "~bootstrap/scss/bootstrap.scss";
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  .mini {
+    padding-top: 20px;
+    min-width: 200px;
+    height: 800px;
+    margin-right: 100px;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    flex-flow: column;
+
+    img.borehole {
+      position: absolute;
+      z-index: 1;
+      //display: none;
+    }
+    .mini__tube {
+      min-height: 150px;
+      width: 100%;
+      position: absolute;
+
+      .mini__tube_tube {
+        height: 100px;
+        width: 100%;
+        z-index: 1;
+        background: url(img/tube.jpg);
+        background-repeat: repeat-y;
+        background-size: 22px;
+        background-position-x: 76px;
+      }
+      .mini__tube_packer {
+        position: relative;
+        height: 60px;
+        width: 100%;
+        z-index: 0;
+        background: url(img/packer.jpg);
+        background-repeat: no-repeat;
+        background-size: 22px;
+        background-position-x: 76px;
+      }
+
+      img.packer {
+        position: relative;
+        z-index: 99;
+        width: 22px;
+        left: 76px;
+        top: -8px;
+      }
+
+    }
+
+    .mini__coilTubing {
+      position: absolute;
+      min-height: 150px;
+      width: 100%;
+      top: -50px;
+      div{
+      .mini__aspo{
+        opacity: 0;
+        width: 100%;
+        height: 20px;
+        z-index: 1;
+        background: url(img/nozzle.png);
+         background-repeat: repeat-y;
+        background-size: 4px;
+        background-position-x: 87px;
+        position: relative;
+        top: 200px;
+        transition: opacity 0.5s cubic-bezier(0, 0, 1, 1);
+        
+      }
+      .mini__coilTubing_tube {
+        width: 100%;
+        height: 30px;
+        z-index: 1;
+        background: url(img/truba.png);
+        background-repeat: repeat-y;
+        background-size: 4px;
+        position: relative;
+        background-position-x: 85px;
+      }
+      .mini__coilTubing_nozzle {
+        width: 100%;
+        height: 20px;
+        z-index: 1;
+        background: url(img/nozzle.png);
+        background-repeat: no-repeat;
+        background-size: 4px;
+        position: relative;
+        background-position-x: 85px;
+
+        img{
+          opacity:0;
+          width: 17px;
+          left: 78px;
+          position: relative;
+          top: -15px;
+        }
+      }
+      }
+    }
+
+
+    .mini__corks{
+      display: flex;
+      flex-flow: column-reverse;
+      flex-grow: 9;
+      width:100%;
+      .mini__cork{
+        // height: 200px;
+        display: flex;
+        flex-flow:column nowrap;
+
+        
+        transition: height 2s ease-in, opacity 5s ease-in  ;
+        .cork{
+          height: 20px;
+          background: url(img/cork.gif);
+          background-size: cover;
+          transition: opacity 0.5s cubic-bezier(0, 0, 1, 1);
+        }
+        .propant{
+          flex: 9 1 35px;
+          background: url(img/propantpost.gif);
+          background-size: cover;
+        }
+      }
+
+    }
+  }
+  .magnifier {
+    width: 200px;
+    transform: scale(4);
+    position: absolute;
+    top: 1000px;
+    left: 250px;
+  }
+    .circle{
+      position: absolute;
+      width: 600px;
+      height: 800px;
+      left: 220px;
+      top: 50px;
+      border: 1px solid grey;
+      overflow: hidden;
+    }
+
+
+}
+.buttons{
+      z-index: 9999;
+}
+.range {
+  z-index: 9999;
+  display: flex;
+  input {
+    width: 50%
+  }
+
+}
