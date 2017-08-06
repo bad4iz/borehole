@@ -1,7 +1,7 @@
 module.exports = (paths) => {
     return {
        module: {
-        loaders: [
+         rules: [
             {
                 test: /\.js$/,
                 exclude: /(node_modules|bower_components)/,
