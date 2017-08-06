@@ -1,7 +1,7 @@
 // пробки
 export default class Cork {
     constructor(height = 100) {
-        this.parents = document.querySelectorAll('.mini__corks');
+        this.parents =  [].slice.call(document.querySelectorAll('.mini__corks'));
         this.height = height;
         this.corks = this._add();
     }
