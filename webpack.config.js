@@ -32,6 +32,7 @@ const common = merge([
             'blog': PATHS.source + '/pages/blog/blog.js'
         },
         output: {
+            library: "rivg",
             path: PATHS.build,
             filename: 'js/[name].js'
         },
