@@ -1,0 +1,1 @@
+import './preventer.scss';

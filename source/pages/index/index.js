@@ -1,25 +1,28 @@
-
-
 import './index.scss';
 import 'normalize.css';
 
 import '../../components/shemeStrapping/schemeStrapping';
+import '../../components/preventer/index';
+import Preventer from'../../components/preventer/Preventer';
 
+// 
 import Cork from './components/Cork';
 import CoilTubings from './components/CoilTubings';
 import Tubes from './components/Tubes';
 
+
 var coilTubings = new CoilTubings();
 var tubes = new Tubes();
-
 
 
 // ползунки
 var tubeRange = document.querySelector('#tubeRange');
 var coilTubingRange = document.querySelector('#coilTubingRange');
 
+
 read("mousedown");
 read("mousemove");
+
 
 function read(evtType) {
     tubeRange.addEventListener(evtType, function () {
@@ -76,8 +79,14 @@ aspoShowButton.onclick = () => {
 
 
 
-// .schemeStrapping
+// schemeStrapping
 var schemeStrappings =  [].slice.call(document.querySelectorAll('.schemeStrapping'));
 schemeStrappings.forEach(schemeStrapping => {
     schemeStrapping.addEventListener('click', (val) => console.log(val.target.id), false );
 })
+
+
+// превентор
+let preventer = new Preventer();
+
+exports.preventer = preventer;

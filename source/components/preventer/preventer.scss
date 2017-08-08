@@ -1,0 +1,80 @@
+.preventers{
+    position: absolute;
+    z-index: 10;
+    top: 137px;
+    width: 106px;
+    left: 34px;
+}
+.preventer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.preventer_img{
+    width: 100%;
+}
+
+// первентор закрыт
+.preventer_empty_closed{
+    width: 0 !important;
+}
+.preventer4{
+    width: 107px;
+    .preventer_img{
+        width: 39px;
+    }
+    .preventer_empty{
+        width: 16px;
+        transition: all 3s ease-in-out;
+    }
+   
+}
+.preventer3{
+    width: 107px;
+    height: 38px;
+    .preventer_img{
+        width: 43px;
+    }
+    .preventer_L{
+        .preventer_img{
+            position: relative;
+            left: -6px
+        }
+    }
+    .preventer_r{
+        .preventer_img{
+            position: relative;
+            z-index: 1;
+            right: -1px;
+        }
+    }
+    .preventer_empty{
+        width: 16px;
+        transition: all 3s ease-in-out;
+    }
+   
+}
+.preventer2{
+    width: 107px;
+    height: 17px;
+    .preventer_img{
+        width: 39px;
+    }
+    .preventer_empty{
+        width: 16px;
+        transition: all 3s ease-in-out;
+    }
+   
+}
+.preventer1{
+    width: 107px;
+    height: 36px;
+    .preventer_img{
+        width: 39px;
+    }
+    .preventer_empty{
+        width: 16px;
+        transition: all 3s ease-in-out;
+    }
+   
+}
