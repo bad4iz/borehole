@@ -1,17 +1,4 @@
 
-
-
-// preventers.forEach(preventer => {
-//     preventer.addEventListener('click', () => {
-
-//         preventer.querySelector('.preventer_empty').classList.toggle('preventer_empty_closed');
-        
-//         console.log('asdfs');
-
-
-//     }, false);
-// });
-
 export default class Preventer {
     constructor() {
         this.preventers =  [].slice.call(document.querySelectorAll('.preventer'));
