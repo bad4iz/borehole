@@ -1,11 +1,12 @@
 // пробки
 export default class Cork {
+
     constructor(height = 100) {
         this.parents =  [].slice.call(document.querySelectorAll('.mini__corks'));
         this.height = height;
         this.corks = this._add();
+        this.propantpost =  [].slice.call(document.querySelectorAll('.propantpost'));
     }
-
 
     _add() {
         var mini__corks = [];
@@ -32,28 +33,48 @@ export default class Cork {
         return mini__corks;
 
     }
+
     // промыл корку
     washed(time = 100) {
         setTimeout(() => {
-            this.corks.forEach((element) => {
-                this._growing(500);
-                this._opacity(9000);
+            this.propantpost.forEach((element) => {
+                this._growing(900);
+                // this._opacity(9000);
             });
-
+            this.corks.forEach((element) => {
+               element.querySelector('.cork').style.opacity = 0;
+            });
         }, time);
     }
 
     _growing(height) {
-         this.corks.forEach((element) => {
+         this.propantpost.forEach((element) => {
                 element.style.height = height + 'px';
             });
     }
 
-    _opacity() {
-              this.corks.forEach((element) => {
-                element.style.opacity = 0;
+    setOpacity(option) {
+              this.propantpost.forEach((element) => {
+                element.style.opacity = option;
+            });
+    }
+    
+    setPosition(pixels) {
+         this.corks.forEach(item => {
+             item.style.top = pixels + 'px';
             });
     }
 
+    setHeight(pixels) {
+         this.corks.forEach(item => { item.style.height = pixels + 'px'; });
+    }
+  
+    reduction(pixels) {
+         this.corks.forEach(item => { item.querySelector('.propant').style.height = pixels + 'px'; });
+    }
+
+
+
+    
 }
 

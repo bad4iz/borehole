@@ -15,7 +15,7 @@ var tubes = new Tubes();
 exports.tubes = tubes;
 exports.coilTubings = coilTubings;
 
-var cork = new Cork(100);
+var cork = new Cork();
 exports.cork = cork;
 
 // schemeStrapping
