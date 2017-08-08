@@ -113,18 +113,28 @@
       }
       }
     }
-
+    .propantpost{
+      background: url(img/propantpost.gif);
+      position: absolute;
+      width: 100%;
+      height: 0px;
+      bottom: 0;
+      transition: height 2s ease-in, opacity 5s ease-in  ;
+    
+    }
 
     .mini__corks{
-      display: flex;
-      flex-flow: column-reverse;
-      flex-grow: 9;
-      width:100%;
+      position: relative;
+      top: 146px;
+      height: 100%;
+      width: 100%;
       .mini__cork{
-        // height: 200px;
-        display: flex;
-        flex-flow:column nowrap;
-
+        position: relative;
+        top: 500px;
+        width: 80%;
+        height: 100px;
+        position: absolute;
+        bottom: 0;
         
         transition: height 2s ease-in, opacity 5s ease-in  ;
         .cork{
@@ -134,9 +144,12 @@
           transition: opacity 0.5s cubic-bezier(0, 0, 1, 1);
         }
         .propant{
-          flex: 9 1 35px;
-          background: url(img/propantpost.gif);
+          position: absolute;
+          bottom: 0;
+          background: url(img/propant_statFon.png);
           background-size: cover;
+          height: 100%;
+          width: 100%;
         }
       }
 
