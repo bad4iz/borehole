@@ -53,28 +53,29 @@ export default class Cork {
             });
     }
 
+    // скрыть показать промывку
     setOpacity(option) {
               this.propantpost.forEach((element) => {
                 element.style.opacity = option;
             });
     }
     
+    // позиционирование
     setPosition(pixels) {
          this.corks.forEach(item => {
              item.style.top = pixels + 'px';
             });
     }
 
+    // высота
     setHeight(pixels) {
          this.corks.forEach(item => { item.style.height = pixels + 'px'; });
     }
   
+    // уменьшение пропанта
     reduction(pixels) {
          this.corks.forEach(item => { item.querySelector('.propant').style.height = pixels + 'px'; });
     }
-
-
-
     
 }
 
