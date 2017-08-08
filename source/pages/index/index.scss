@@ -118,7 +118,8 @@
       position: absolute;
       width: 100%;
       height: 0px;
-      bottom: 0;
+      z-index: -1;
+      bottom: -165px;;
       transition: height 2s ease-in, opacity 5s ease-in  ;
     
     }
@@ -142,6 +143,8 @@
           background: url(img/cork.gif);
           background-size: cover;
           transition: opacity 0.5s cubic-bezier(0, 0, 1, 1);
+          top: -21px;
+          position: relative;
         }
         .propant{
           position: absolute;
@@ -150,6 +153,7 @@
           background-size: cover;
           height: 100%;
           width: 100%;
+          z-index: 0
         }
       }
 

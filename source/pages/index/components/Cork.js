@@ -38,7 +38,7 @@ export default class Cork {
     washed(time = 100) {
         setTimeout(() => {
             this.propantpost.forEach((element) => {
-                this._growing(900);
+                this._growing(800);
                 // this._opacity(9000);
             });
             this.corks.forEach((element) => {
@@ -53,7 +53,7 @@ export default class Cork {
             });
     }
 
-    // скрыть показать промывку
+    // скрыть показать промывку 720
     setOpacity(option) {
               this.propantpost.forEach((element) => {
                 element.style.opacity = option;
@@ -62,6 +62,7 @@ export default class Cork {
     
     // позиционирование
     setPosition(pixels) {
+        this.setHeight(820 - pixels)
          this.corks.forEach(item => {
              item.style.top = pixels + 'px';
             });
