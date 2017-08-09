@@ -18,10 +18,16 @@ exports.coilTubings = coilTubings;
 var cork = new Cork();
 exports.cork = cork;
 
+
+// 
+let rivgValveConsol = (el) => {
+    let open = ~el.target.className.indexOf('Of')?'1':'0';
+    return 'RivgCodeinterpreter(SetChenjPer([' + el.target.id + ']////' + open +');)EndCode';
+} 
 // schemeStrapping
 var schemeStrappings =  [].slice.call(document.querySelectorAll('.schemeStrapping'));
 schemeStrappings.forEach(schemeStrapping => {
-    schemeStrapping.addEventListener('click', (val) => console.log(val.target.id), false );
+    schemeStrapping.addEventListener('click', (val) => console.log(rivgValveConsol(val)) , false );
 })
 
 // превентор
