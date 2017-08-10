@@ -20,8 +20,8 @@ valves.forEach(valve => {
 
 
 // замыкание создание функции и вызов ее же
-var christmasTreeClosed3  = (() => {
-    var christmasTree3 =  [].slice.call(document.querySelectorAll('.christmasTree_3'));
+let christmasTreeClosed3  = (() => {
+    let christmasTree3 =  [].slice.call(document.querySelectorAll('.christmasTree_3'));
     return (valve) => {
         if (valve.id === 'christmasTree_3') {
             christmasTree3.forEach(item => item.classList.toggle('christmasTree_3_closed'))
@@ -29,7 +29,7 @@ var christmasTreeClosed3  = (() => {
     }
 })();
 
-// добавле удаление давления в установках
+// добавление / удаление давления в установках
 let pressures = [].slice.call(document.querySelectorAll('.pressure '));
 // вывод в консоль
 let getPressuresItem = (el) => {
