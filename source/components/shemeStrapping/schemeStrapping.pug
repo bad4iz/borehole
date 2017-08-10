@@ -1,64 +1,80 @@
 section.schemeStrappings
 
-    .gaugePressurePipe
-        span#gaugePressurePipe 666
-        span bar
+  .gaugePressurePipe
+    span#gaugePressurePipe 666
+    span bar
+
+  #christmasTree_1.schemeStrapping.valve.christmasTree
+  #christmasTree_2.schemeStrapping.valve.christmasTree
+  #christmasTree_3.schemeStrapping.valve.christmasTree
+
+
+  // малый затрубок
+  #smallBranch_1.schemeStrapping.kvd.christmasTree
+  #smallBranch_2.schemeStrapping.kvd.christmasTree
+
+  // меж колонка
+  #betweenColumn_1.schemeStrapping.valve.christmasTree
+  #betweenColumn_2.schemeStrapping.valve.christmasTree
+
+  // затрубная задвижка
+  #branchValue_1.valve.christmasTree.schemeStrapping
+  #branchValue_2.valve.christmasTree.schemeStrapping
+
+  // струна
+  #string_1.valve.christmasTree.schemeStrapping
+  #string_2.valve.christmasTree.schemeStrapping
+
+  // дросель
+  #throttle_1.schemeStrapping.kvd.throttle
+  #throttle_2.schemeStrapping.kvd.throttle
+  #throttle_3.schemeStrapping.kvd.throttle
+  #throttle_4.schemeStrapping.kvd.throttle
+  #throttle_5.schemeStrapping.kvd.throttle
+  #throttle_6.schemeStrapping.kvd.throttle
+  #throttle_7.schemeStrapping.kvd.throttle
+  #throttle_8.schemeStrapping.kvd.throttle
   
-    #christmasTree_1.schemeStrapping.valve.christmasTree
-    #christmasTree_2.schemeStrapping.valve.christmasTree
-    #christmasTree_3.schemeStrapping.valve.christmasTree
+  // линия высокого давления
+  #highPressureLine_1.kvd.schemeStrapping
+  #highPressureLine_2.kvd.schemeStrapping
+  #highPressureLine_3.kvd.schemeStrapping
 
+  // линия высокого давления азотная установка
+  #highPressureLineNitrogen.kvd.schemeStrapping
 
-    // малый затрубок
-    #smallBranch_1.schemeStrapping.kvd.christmasTree
-    #smallBranch_2.schemeStrapping.kvd.christmasTree
+  // линия высокого давления насосная установка
+  #highPressureLinePomp.kvd.schemeStrapping
 
-    // меж колонка
-    #betweenColumn_1.schemeStrapping.valve.christmasTree
-    #betweenColumn_2.schemeStrapping.valve.christmasTree
+  // линия низкого давления
+  
+  // линия низкого давления  кислотная установка` - 
+  #lineLowPressureAcid.kvd.schemeStrapping
+  // линия низкого давления  кислотная установка_1` 
+  #lineLowPressureAcid_1.kvd.schemeStrapping
+  // линия низкого давления  кислотная установка_2` 
+  #lineLowPressureAcid_2.kvd.schemeStrapping
 
-    // затрубная задвижка
-    #branchValue_1.valve.christmasTree.schemeStrapping
-    #branchValue_2.valve.christmasTree.schemeStrapping
-
-    // струна
-    #string_1.valve.christmasTree.schemeStrapping
-    #string_2.valve.christmasTree.schemeStrapping
-
-    // дросель
-    #throttle_1.schemeStrapping.kvd.throttle
-    #throttle_2.schemeStrapping.kvd.throttle
-    #throttle_3.schemeStrapping.kvd.throttle
-    #throttle_4.schemeStrapping.kvd.throttle
-    #throttle_5.schemeStrapping.kvd.throttle
-    #throttle_6.schemeStrapping.kvd.throttle
-    #throttle_7.schemeStrapping.kvd.throttle
-    #throttle_8.schemeStrapping.kvd.throttle
+  // линия низкого давления  резервуар` - 
+  #lineLowPressureReservoir.kvd.schemeStrapping
+  // линия низкого давления  резервуар_1` 
+  #lineLowPressureReservoir_1.kvd.schemeStrapping
+  // линия низкого давления  резервуар_2` 
+  #lineLowPressureReservoir_2.kvd.schemeStrapping
+  // линия низкого давления  циркуляционная емкость` 
+  #lineLowPressureCirculation.kvd.schemeStrapping
     
-    // линия высокого давления
-    #highPressureLine_1.kvd.schemeStrapping
-    #highPressureLine_2.kvd.schemeStrapping
-    #highPressureLine_3.kvd.schemeStrapping
-
-    // линия высокого давления азотная установка
-    #highPressureLineNitrogen.kvd.schemeStrapping
-
-    // линия высокого давления насосная установка
-    #highPressureLinePomp.kvd.schemeStrapping
-
-    // линия низкого давления
-        // линия низкого давления  кислотная установка` - 
-    #lineLowPressureAcid.kvd.schemeStrapping
-        // линия низкого давления  кислотная установка_1` 
-    #lineLowPressureAcid_1.kvd.schemeStrapping
-        // линия низкого давления  кислотная установка_2` 
-    #lineLowPressureAcid_2.kvd.schemeStrapping
-
-        // линия низкого давления  резервуар` - 
-    #lineLowPressureReservoir.kvd.schemeStrapping
-        // линия низкого давления  резервуар_1` 
-    #lineLowPressureReservoir_1.kvd.schemeStrapping
-        // линия низкого давления  резервуар_2` 
-    #lineLowPressureReservoir_2.kvd.schemeStrapping
-        // линия низкого давления  циркуляционная емкость` 
-    #lineLowPressureCirculation.kvd.schemeStrapping
+  .pressure_nitrogen  
+    .pressure 
+      .pressure_buttonPlus
+        span= '+'
+      .pressure_buttonMinus
+        span= '-'
+    
+  .pressure_pomp
+    .pressure 
+      .pressure_buttonPlus
+        span= '+'
+      .pressure_buttonMinus
+        span= '-'
+          

@@ -130,38 +130,38 @@
     left: 507px;
 }
 
-// линия низкого давления  кислотная установка` - 
+// линия низкого давления  кислотная установка` -
 #lineLowPressureAcid{
       top: 300px;
     left: 534px;
 }
-// линия низкого давления  кислотная установка_1` 
+// линия низкого давления  кислотная установка_1`
 #lineLowPressureAcid_1{
     top: 436px;
     left: 467px;
 }
-// линия низкого давления  кислотная установка_2` 
+// линия низкого давления  кислотная установка_2`
 #lineLowPressureAcid_2{
     top: 368px;
     left: 466px;
 }
 
-// линия низкого давления  резервуар` - 
+// линия низкого давления  резервуар` -
 #lineLowPressureReservoir{
   top: 300px;
   left: 600px;
 }
-// линия низкого давления  резервуар_1` 
+// линия низкого давления  резервуар_1`
 #lineLowPressureReservoir_1{
   top: 436px;
   left: 669px;
 }
-// линия низкого давления  резервуар_2` 
+// линия низкого давления  резервуар_2`
 #lineLowPressureReservoir_2{
   top: 369px;
   left: 669px;
 }
-// линия низкого давления  циркуляционная емкость` 
+// линия низкого давления  циркуляционная емкость`
 #lineLowPressureCirculation{
   top: 335px;
   left: 568px;
@@ -250,4 +250,50 @@
   // span bar
 span#gaugePressurePipe {
     margin-right: 6px;
+}
+
+
+// добавление давлениея машинам
+.pressure_nitrogen{
+  position: absolute;
+  top: 197px;
+  left: 344px;
+}
+.pressure_pomp{
+  position: absolute;
+  top: 161px;
+  left: 556px;
+}
+
+.pressure{
+  .pressure_buttonPlus{
+    display: inline-block;
+    border: 1px solid rgba(255, 76, 76, 0.06);
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px #3a3a3a;
+    margin-right: 9px;
+
+    &:active{
+      border-color: rgb(255, 0, 0);
+      background-color: #d43d3d;
+      box-shadow: 0 0 20px #3a3a3a;
+    }
+  }
+
+  .pressure_buttonMinus{
+    display: inline-block;
+    border: 1px solid rgba(255, 76, 76, 0.06);
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px #3a3a3a;
+    &:active{
+      border-color: rgb(82, 255, 0);
+      background-color: rgba(82, 255, 0, 0.77);
+      box-shadow: 0 0 20px #3a3a3a;
+    }
+  }
+  span{
+    margin: 5px;
+    font-size: 20px;
+    font-family: monospace;
+  }
 }
