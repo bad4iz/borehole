@@ -8,12 +8,11 @@ export default class PressureTesting {
     return document.querySelector('.christmasTree_3_closed');
   }
 
-  // оприсовка
+  // прессовка
   // 1 до первой задвижке
   // 2 до второй задвижки
-  // 3 полная промывкаы
+  // 3 полная промывка
   testing(number){
-    if (!this.isClosed()) {return}
     switch (number) {
       case 3:
         this.pressureTesting1.forEach(item => item.className = 'pressureTesting_1' );
