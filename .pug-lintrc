@@ -19,5 +19,5 @@
   "validateAttributeSeparator": { "separator": " ", "multiLineSeparator": "\n " },
   "validateDivTags": true,
   "validateExtensions": true,
-  "validateIndentation": 4
+  "validateIndentation": 2
 }
