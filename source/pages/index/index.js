@@ -8,6 +8,7 @@ import Preventer from'../../components/preventer/Preventer';
 import Cork from './components/Cork';
 import CoilTubings from './components/CoilTubings';
 import Tubes from './components/Tubes';
+import PressureTesting from './components/PressureTesting.js';
 
 var coilTubings = new CoilTubings();
 var tubes = new Tubes();
@@ -23,7 +24,8 @@ exports.cork = cork;
 let rivgValveConsol = (el) => {
     let open = ~el.target.className.indexOf('Of')?'1':'0';
     return 'RivgCodeinterpreter(SetChenjPer([' + el.target.id + ']////' + open +');)EndCode';
-} 
+}
+
 // schemeStrapping
 var schemeStrappings =  [].slice.call(document.querySelectorAll('.schemeStrapping'));
 schemeStrappings.forEach(schemeStrapping => {
@@ -34,6 +36,9 @@ schemeStrappings.forEach(schemeStrapping => {
 let preventer = new Preventer();
 exports.preventer = preventer;
 
+// опресовка
+let pressureTesting = new PressureTesting();
+exports.pressureTesting = pressureTesting;
 
 
 
@@ -65,18 +70,18 @@ aspoInput.onchange = () => {
 
 var aspoHideButton = document.querySelector('button#aspoHide');
 aspoHideButton.onclick = () => {
-    // 
+    //
     tubes.aspoHide();
 };
 
 var aspoShowButton = document.querySelector('button#aspoShow');
 aspoShowButton.onclick = () => {
-    // 
+    //
     tubes.aspoShow();
 };
 
 
-///////////  cork 
+///////////  cork
 var i = 0;
 var buttonWashed = document.querySelector('button#washed');
 buttonWashed.onclick = () => {
@@ -85,7 +90,7 @@ buttonWashed.onclick = () => {
 };
 
 
-///////// трубы 
+///////// трубы
 // ползунки
 var tubeRange = document.querySelector('#tubeRange');
 var coilTubingRange = document.querySelector('#coilTubingRange');
@@ -111,5 +116,3 @@ function read(evtType) {
         });
     });
 }
-
-
