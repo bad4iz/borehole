@@ -1,62 +1,65 @@
 extends ../base.pug
 
 block title
-    index page
+  index page
 block main
 
-    .main
+  .main
+    .mini
+      .pressureTesting
+        .pressureTesting_1.pressureTesting_empty  
+        .pressureTesting_2.pressureTesting_empty
+      include ../../components/preventer/preventer.pug
+      .christmasTree_3
+      img.borehole(src=require('./img/skv.png') width='200px')
+      .mini__tube
+        .mini__tube_tube
+        .mini__tube_packer
+        img.packer(src=require('./img/hopper.png'))
+        //img.packer(src=require('./img/packer.jpg') width='200px');
+      .mini__coilTubing
+        div
+          .mini__aspo
+          .mini__coilTubing_tube
+          .mini__coilTubing_nozzle
+            img.potok(src=require('./img/potok.gif'))
+      .mini__corks
+      .propantpost
+    .circle
+      .magnifier
         .mini
-            .pressureTesting
-              .pressureTesting_1.pressureTesting_empty  
-              .pressureTesting_2.pressureTesting_empty
-            include ../../components/preventer/preventer.pug
-            .christmasTree_3
-            img.borehole(src=require('./img/skv.png') width='200px')
-            .mini__tube
-                .mini__tube_tube
-                .mini__tube_packer
-                img.packer(src=require('./img/hopper.png'))
-                //img.packer(src=require('./img/packer.jpg') width='200px');
-            .mini__coilTubing
-                div
-                    .mini__aspo
-                    .mini__coilTubing_tube
-                    .mini__coilTubing_nozzle
-                        img.potok(src=require('./img/potok.gif'))
-            .mini__corks
-            .propantpost
-        .circle
-            .magnifier
-                .mini
-                    include ../../components/preventer/preventer.pug
-                    .christmasTree_3
-                    img.borehole(src=require('./img/skv.png') width='200px')
-                    .mini__tube
-                        .mini__tube_tube
-                        .mini__tube_packer
-                        img.packer(src=require('./img/hopper.png'))
-                    .mini__coilTubing
-                        div
-                            .mini__aspo
-                            .mini__coilTubing_tube
-                            .mini__coilTubing_nozzle
-                                img.potok(src=require('./img/potok.gif'))
-                    .propantpost
-                    .mini__corks
-        
-     
-        include ../../components/shemeStrapping/schemeStrapping.pug
-        
-        .buttons
-            button#potok поток
-            button#washed промыл
-            br
-            br
-            input#aspoInput 
-            br
-            br
-            button#aspoShow показать
-            button#aspoHide скрыть
-    .range
-        input#coilTubingRange(type='range' min='0' max='900' step='1' value='0')
-        input#tubeRange(type='range' min='0' max='700' step='1' value='0')
+          .pressureTesting
+            .pressureTesting_1.pressureTesting_empty  
+            .pressureTesting_2.pressureTesting_empty
+          include ../../components/preventer/preventer.pug
+          .christmasTree_3
+          img.borehole(src=require('./img/skv.png') width='200px')
+          .mini__tube
+            .mini__tube_tube
+            .mini__tube_packer
+            img.packer(src=require('./img/hopper.png'))
+          .mini__coilTubing
+              div
+                .mini__aspo
+                .mini__coilTubing_tube
+                .mini__coilTubing_nozzle
+                  img.potok(src=require('./img/potok.gif'))
+          .propantpost
+          .mini__corks
+    
+ 
+    include ../../components/shemeStrapping/schemeStrapping.pug
+    
+    .buttons
+      button#potok поток
+      button#washed промыл
+      br
+      br
+      input#aspoInput 
+      br
+      br
+      button#aspoShow показать
+      button#aspoHide скрыть
+  .range
+    input#coilTubingRange(type='range' min='0' max='900' step='1' value='0')
+    input#tubeRange(type='range' min='0' max='700' step='1' value='0')
