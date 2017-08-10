@@ -28,9 +28,10 @@
   width: 40px;
   height: 40px;
   background-size: contain;
-   transition: all 5s ease-in-out;
-   border-radius: 50%;
-   box-shadow: 0 0 7px #3a3a3a, 0px 0px 3px rgba(241, 9, 9, 0.65);
+  transition: all 5s ease-in-out;
+  border-radius: 50%;
+  transform: rotate(-3330deg) scale(1.1);
+  box-shadow: 0 0 7px #3a3a3a, 0px 0px 2px 2px rgba(9, 241, 32, 0.65);
 }
 
 .kvdOf{
@@ -39,8 +40,8 @@
 
 
 .valveOf{
-  transform: rotate(-3330deg) scale(1.1);
-   box-shadow: 0 0 7px #3a3a3a, 0px 0px 2px 2px rgba(9, 241, 32, 0.65);
+  transform: rotate(3330deg) scale(0.9);
+  box-shadow: 0 0 7px #3a3a3a, 0px 0px 3px rgba(241, 9, 9, 0.65);
 }
 
 
