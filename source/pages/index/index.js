@@ -20,7 +20,7 @@ var cork = new Cork();
 exports.cork = cork;
 
 
-// 
+//
 let rivgValveConsol = (el) => {
     let open = ~el.target.className.indexOf('Of')?'1':'0';
     return 'RivgCodeinterpreter(SetChenjPer([' + el.target.id + ']////' + open +');)EndCode';

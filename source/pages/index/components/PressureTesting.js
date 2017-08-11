@@ -27,8 +27,8 @@ export default class PressureTesting {
       this.pressureTesting2.forEach(item => item.className ='pressureTesting_2 pressureTesting_2_1' );
         break;
       default:
-      this.pressureTesting1.forEach(item => item.classList.add('pressureTesting_empty'));
-      this.pressureTesting2.forEach(item => item.classList.remove('pressureTesting_empty'));
+      this.pressureTesting1.forEach(item => item.className = 'pressureTesting_empty pressureTesting_1' );
+      this.pressureTesting2.forEach(item => item.className = 'pressureTesting_empty pressureTesting_2' );
     }
   }
 }
