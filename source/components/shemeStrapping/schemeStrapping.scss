@@ -236,8 +236,7 @@
 .gaugePressurePipe{
     border: 1px solid #3a3a3a;
     width: 76px;
-    height: 30px;
-    position: relative;
+    position: absolute;
     top: 201px;
     left: 651px;
     background: cyan;
@@ -245,11 +244,65 @@
     padding-left: 11px;
     font-family: monospace;
     padding: 5px 13px;
+    box-shadow: 0px 0px 1px #3a3a3a;
 }
   // #gaugePressurePipe
   // span bar
 span#gaugePressurePipe {
     margin-right: 6px;
+}
+
+// давление в трубопроводе
+.gaugePressurePipeline{
+  border: 1px solid #3a3a3a;
+  width: 76px;
+  position: absolute;
+  top: 477px;
+  left: 262px;
+  background: cyan;
+  padding-left: 11px;
+  font-family: monospace;
+  padding: 5px 13px;
+  box-shadow: 0px 0px 1px #3a3a3a;
+  span {
+    margin-right: 6px;
+  }
+}
+
+// давление насоса по азоту
+.gaugePumpPressureForNitrogen{
+  border: 1px solid #3a3a3a;
+  width: 67px;
+  position: absolute;
+  top: 276px;
+  left: 330px;
+  background: cyan;
+  padding-left: 11px;
+  font-family: monospace;
+  padding: 5px 13px;
+  box-shadow: 0px 0px 1px #3a3a3a;
+  span {
+    margin-right: 6px;
+  }
+}
+
+
+// давление насоса
+.gaugePumpPressure{
+  border: 1px solid #3a3a3a;
+  width: 67px;
+  height: -9px;
+  position: absolute;
+  top: 241px;
+  left: 547px;
+  background: cyan;
+  padding-left: 11px;
+  font-family: monospace;
+  padding: 5px 13px;
+  box-shadow: 0px 0px 1px #3a3a3a;
+  span {
+    margin-right: 6px;
+  }
 }
 
 
@@ -274,7 +327,7 @@ span#gaugePressurePipe {
     margin-right: 9px;
     font-family: monospace;
     padding: 4px;
-  
+
     &:active{
       border-color: rgb(255, 0, 0);
       background-color: #d43d3d;
