@@ -24,13 +24,13 @@ exports.cork = cork;
 let rivgValveConsol = (el) => {
     let open = ~el.target.className.indexOf('Of')?'1':'0';
     return 'RivgCodeinterpreter(SetChenjPer([' + el.target.id + ']////' + open +');)EndCode';
-}
+};
 
 // schemeStrapping
 var schemeStrappings =  [].slice.call(document.querySelectorAll('.schemeStrapping'));
 schemeStrappings.forEach(schemeStrapping => {
     schemeStrapping.addEventListener('click', (val) => console.log(rivgValveConsol(val)) , false );
-})
+});
 
 // превентор
 let preventer = new Preventer();
@@ -41,78 +41,27 @@ let pressureTesting = new PressureTesting();
 exports.pressureTesting = pressureTesting;
 
 
+function vis() {
+    let valves = [].slice.call(document.querySelectorAll('.valve'));
+    let kvds = [].slice.call(document.querySelectorAll('.kvd'));
 
+    valves.forEach(valve => {
+        let p = document.createElement('p');
+        p.innerText = valve.id;
+        p.style.transform = 'rotate(-90deg) ';
+        p.style.position = 'relative';
+        p.style.left = '-30px';
+        valve.appendChild(p)
+    })
+    kvds.forEach(valve => {
+        let p = document.createElement('p');
+        p.innerText = valve.id;
+        p.style.transform = 'rotate(0deg) ';
+        p.style.position = 'relative';
+        p.style.top = '-30px';
+        valve.appendChild(p)
+    })
 
-
-
-
-
-
-
-//////////////////////// удалить после сборки ////////////////////////////////////
-
- // промывка включить выключить
-var buttonPotok = document.querySelector('button#potok');
-buttonPotok.onclick = () => {
-    // промывка включить выключить
-    tubes.waterFlow();
-};
-
-
-/////// aspo
-
-var aspoInput = document.querySelector('input#aspoInput');
-aspoInput.onchange = () => {
-    // position aspo
-    tubes.aspoPosition(300);
-    tubes.aspoShow();
-};
-
-var aspoHideButton = document.querySelector('button#aspoHide');
-aspoHideButton.onclick = () => {
-    //
-    tubes.aspoHide();
-};
-
-var aspoShowButton = document.querySelector('button#aspoShow');
-aspoShowButton.onclick = () => {
-    //
-    tubes.aspoShow();
-};
-
-
-///////////  cork
-var i = 0;
-var buttonWashed = document.querySelector('button#washed');
-buttonWashed.onclick = () => {
-    // промывка включить выключить
-    cork.washed();
-};
-
-
-///////// трубы
-// ползунки
-var tubeRange = document.querySelector('#tubeRange');
-var coilTubingRange = document.querySelector('#coilTubingRange');
-
-
-
-read("mousedown");
-read("mousemove");
-
-
-function read(evtType) {
-    tubeRange.addEventListener(evtType, function () {
-        window.requestAnimationFrame(function () {
-            // само движение
-            tubes.position(tubeRange.value);
-        });
-    });
-
-    coilTubingRange.addEventListener(evtType, function () {
-        window.requestAnimationFrame(function () {
-            // само движение
-            coilTubings.position(coilTubingRange.value);
-        });
-    });
 }
+
+exports.vis = vis;
