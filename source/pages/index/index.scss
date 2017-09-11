@@ -12,10 +12,11 @@
     flex-flow: column;
     .pressureTesting{
       position: relative;
-      top: 0;
+      top: 67px;
       width: 100%;
-      height: 408px;
-      z-index: 6;
+      height: 240px;
+      left: 1px;
+      //z-index: 6;
       .pressureTesting_1{
         position: absolute;
         background-color: blue;
@@ -25,24 +26,30 @@
         left: 77px;
         transition: all 2s ease-out;
       }
+      .pressureTesting_1_full{
+        width: 70px;
+      }
       .pressureTesting_2{
+        z-index: 2;
         position: absolute;
         background-color: blue;
-        bottom: 34px;
+        bottom: 9px;
         height: 282px;
         width: 11px;
         left: 81px;
-        transition: all 2s ease-out;
-        transition-delay: 2s;
+        transition: all 1s;
+        transition-delay: 1s;
       }
       .pressureTesting_empty{
         height: 0 !important;
       }
       .pressureTesting_2_2{
-        height: 107px !important;
+        height: 133px !important;
+        //transition-delay: 2s;
       }
       .pressureTesting_2_1{
-        height: 28px !important;
+        height: 53px !important;
+        //transition-delay: 2s;
       }
     }
     .christmasTree_3{
@@ -195,6 +202,7 @@
 
     }
   }
+
   .magnifier {
     width: 200px;
     transform: scale(4);
@@ -208,11 +216,11 @@
       height: 800px;
       left: 220px;
       top: 50px;
-      border: 1px solid grey;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 0 4px #3a3a3a;
       overflow: hidden;
     }
-
-
 }
 
 .buttons{
@@ -226,4 +234,13 @@
     width: 50%
   }
 
+}
+.blockWite {
+  width: 30%;
+  height: 110px;
+  position: absolute;
+  background-color: white;
+  top: 860px;
+  left: 0;
+  z-index: 999;
 }

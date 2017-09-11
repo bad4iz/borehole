@@ -16,15 +16,15 @@ export default class PressureTesting {
   testing(number){
     switch (number) {
       case 3:
-        this.pressureTesting1.forEach(item => item.className = 'pressureTesting_1' );
+        this.pressureTesting1.forEach(item => item.className = 'pressureTesting_1 pressureTesting_2_2' );
         this.pressureTesting2.forEach(item => item.className = 'pressureTesting_2' );
         break;
       case 2:
-        this.pressureTesting1.forEach(item =>item.className ='pressureTesting_1' );
+        this.pressureTesting1.forEach(item =>item.className ='pressureTesting_1 pressureTesting_2_2' );
         this.pressureTesting2.forEach(item => item.className ='pressureTesting_2 pressureTesting_2_2' );
         break;
       case 1:
-        this.pressureTesting1.forEach(item =>item.className ='pressureTesting_1' );
+        this.pressureTesting1.forEach(item =>item.className ='pressureTesting_1 pressureTesting_2_2' );
         this.pressureTesting2.forEach(item => item.className ='pressureTesting_2 pressureTesting_2_1' );
         break;
       default:

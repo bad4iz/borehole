@@ -15,6 +15,7 @@
   height: 25px;
   background-size: contain;
   background-repeat: no-repeat;
+  transform: rotate(90deg);
    transition: all 1s ease-in-out;
     border-radius: 50%;
    box-shadow: 0 0 6px #3a3a3a;;
@@ -33,7 +34,7 @@
 }
 
 .kvdOf{
-  transform: rotate(90deg)  scale(1.1);
+  transform: rotate(0deg)  scale(1.1);
 }
 
 
@@ -321,12 +322,11 @@ span#gaugePressurePipe {
   .pressure_buttonPlus{
     display: inline-block;
     border: 1px solid rgba(255, 76, 76, 0.06);
-    border-radius: 50%;
     box-shadow: 1px 1px 2px #3a3a3a;
     margin-right: 9px;
     font-family: monospace;
     padding: 4px;
-
+    padding: 5px 10px;
     &:active{
       border-color: rgb(255, 0, 0);
       background-color: #d43d3d;
@@ -337,11 +337,11 @@ span#gaugePressurePipe {
   .pressure_buttonMinus{
     display: inline-block;
     border: 1px solid rgba(255, 76, 76, 0.06);
-    border-radius: 50%;
     box-shadow: 1px 1px 2px #3a3a3a;
     margin-right: 9px;
     font-family: monospace;
     padding: 4px;
+    padding: 5px 10px;
     &:active{
       border-color: rgb(82, 255, 0);
       background-color: rgba(82, 255, 0, 0.77);

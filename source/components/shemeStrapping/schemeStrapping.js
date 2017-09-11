@@ -1,4 +1,5 @@
 import './schemeStrapping.scss';
+import displayInRivg from "../libs/displayInRivg";
 
 var kvds = [].slice.call(document.querySelectorAll('.kvd'));
 
@@ -13,7 +14,6 @@ var valves = [].slice.call(document.querySelectorAll('.valve'));
 valves.forEach(valve => {
     valve.addEventListener('click', () => {
         valve.classList.toggle('valveOf');
-        // console.log(valve.className);
         christmasTreeClosed3(valve);
     }, false);
 });
@@ -36,7 +36,7 @@ let getPressuresItem = (el) => {
   let parent = el.parentNode.parentNode.className;
   let child = ~el.className.indexOf('buttonPlus')?1:0;
 
-  console.log('RivgCodeinterpreter(SetChenjPer([' + parent + ']////'+ child + ');)EndCode');
+    displayInRivg('RivgCodeinterpreter(SetChenjPer([' + parent + ']////'+ child + ');)EndCode');
 };
 // сам обработчик
 pressures.forEach(pressure => {

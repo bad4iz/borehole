@@ -9,6 +9,8 @@ import Cork from './components/Cork';
 import CoilTubings from './components/CoilTubings';
 import Tubes from './components/Tubes';
 import PressureTesting from './components/PressureTesting.js';
+import displayInRivg from "../../components/libs/displayInRivg";
+import preventSelection from "../../components/libs/preventSelection";
 
 var coilTubings = new CoilTubings();
 var tubes = new Tubes();
@@ -29,7 +31,7 @@ let rivgValveConsol = (el) => {
 // schemeStrapping
 var schemeStrappings =  [].slice.call(document.querySelectorAll('.schemeStrapping'));
 schemeStrappings.forEach(schemeStrapping => {
-    schemeStrapping.addEventListener('click', (val) => console.log(rivgValveConsol(val)) , false );
+    schemeStrapping.addEventListener('click', (val) => displayInRivg(rivgValveConsol(val)) , false );
 });
 
 // превентор
@@ -52,7 +54,7 @@ function vis() {
         p.style.position = 'relative';
         p.style.left = '-30px';
         valve.appendChild(p)
-    })
+    });
     kvds.forEach(valve => {
         let p = document.createElement('p');
         p.innerText = valve.id;
@@ -65,3 +67,7 @@ function vis() {
 }
 
 exports.vis = vis;
+
+
+// удаляем выделение текста
+preventSelection(document);
