@@ -20,7 +20,13 @@
     border-radius: 50%;
    box-shadow: 0 0 6px #3a3a3a;;
 }
+.kvd.horizontal.kvdOf{
+  transform: rotate(90deg);
 
+}.kvd.horizontal{
+  transform: rotate(0deg);
+
+}
 .valve{
   position: absolute;
   background: url(./img/valve.png);
@@ -30,17 +36,16 @@
   transition: all 5s ease-in-out;
   border-radius: 50%;
   transform: rotate(-3330deg) scale(1.1);
-  box-shadow: 0 0 7px #3a3a3a, 0px 0px 2px 2px rgba(9, 241, 32, 0.65);
+  box-shadow: 0 0 7px #3a3a3a, 0 0 2px 2px rgba(9, 241, 32, 0.65);
 }
 
 .kvdOf{
   transform: rotate(0deg)  scale(1.1);
 }
 
-
 .valveOf{
   transform: rotate(3330deg) scale(0.9);
-  box-shadow: 0 0 7px #3a3a3a, 0px 0px 3px rgba(241, 9, 9, 0.65);
+  box-shadow: 0 0 7px #3a3a3a, 0 0 3px rgba(241, 9, 9, 0.65);
 }
 
 
