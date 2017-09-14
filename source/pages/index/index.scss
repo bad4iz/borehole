@@ -1,6 +1,7 @@
 .main {
   display: flex;
   justify-content: space-between;
+  margin-top: 70px;
   .mini {
     padding-top: 20px;
     min-width: 200px;
@@ -215,11 +216,10 @@
       width: 600px;
       height: 800px;
       left: 220px;
-      top: 50px;
+      top: 129px;
       overflow: hidden;
       border-radius: 10px;
       box-shadow: 0 0 4px #3a3a3a;
-      overflow: hidden;
     }
 }
 
