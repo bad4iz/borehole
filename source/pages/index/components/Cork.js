@@ -3,6 +3,7 @@ export default class Cork {
 
     constructor(height = 100) {
         this.parents =  [].slice.call(document.querySelectorAll('.mini__corks'));
+        this.potoks =  [].slice.call(document.querySelectorAll('.potok'));
         this.height = height;
         this.corks = this._add();
         this.propantpost =  [].slice.call(document.querySelectorAll('.propantpost'));
@@ -55,14 +56,14 @@ export default class Cork {
 
     // скрыть показать промывку 720
     setOpacity(option) {
-              this.propantpost.forEach((element) => {
+              this.potoks.forEach((element) => {
                 element.style.opacity = option;
             });
     }
     
     // позиционирование
     setPosition(pixels) {
-        this.setHeight(820 - pixels)
+        this.setHeight(820 - pixels);
          this.corks.forEach(item => {
              item.style.top = pixels + 'px';
             });
